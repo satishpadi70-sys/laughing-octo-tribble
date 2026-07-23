@@ -9,7 +9,7 @@ jobs:
       - uses: bcanseco/github-contribution-graph-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_EMAIL: your-verified-email@example.com
+          GIT_EMAIL: satishpadi70@gmail.com
           MAX_DAYS: 365             # Backfill up to 1 year
           MIN_COMMITS_PER_DAY: 1    # Minimum commits per day
           MAX_COMMITS_PER_DAY: 5    # Maximum commits per day   
