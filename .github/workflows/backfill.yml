@@ -1,0 +1,15 @@
+name: Backfill Contributions
+on: push # Triggers when you push to the repo
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: bcanseco/github-contribution-graph-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_EMAIL: your-verified-email@example.com
+          MAX_DAYS: 365             # Backfill up to 1 year
+          MIN_COMMITS_PER_DAY: 1    # Minimum commits per day
+          MAX_COMMITS_PER_DAY: 5    # Maximum commits per day   
